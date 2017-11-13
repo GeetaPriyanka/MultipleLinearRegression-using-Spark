@@ -1,0 +1,21 @@
+
+
+# Name- Geeta Priyanka Janapareddy
+# Email id - gjanapar@uncc.edu
+
+Create user directory and move files to that directory:
+
+$ sudo su hdfs
+$ hadoop fs -mkdir /user/cloudera
+$ hadoop fs -chown cloudera /user/cloudera
+$ exit
+$ hadoop fs -put linreg.py /user/cloudera
+$ hadoop fs -put yxlin.csv /user/cloudera
+$ hadoop fs -put yxlin2.csv /user/cloudera
+
+Execute the file:
+
+$ spark-submit linearreg.py yxlin.csv
+$ spark-submit linreareg.py yxlin2.csv
+
+Copy the output from console to a file
